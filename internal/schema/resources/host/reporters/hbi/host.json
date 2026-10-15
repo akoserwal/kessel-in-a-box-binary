@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "satellite_id": {
+      "oneOf": [
+        { "type": "string", "format": "uuid" },
+        { "type": "string", "pattern": "^\\d{10}$" },
+        { "type": "null" }
+      ]
+    },
+    "subscription_manager_id": { 
+      "oneOf": [
+        { "type": "string", "format": "uuid" },
+        { "type": "null" }
+      ]
+    },
+    "insights_id": { 
+      "oneOf": [
+        { "type": "string", "format": "uuid" },
+        { "type": "null" }
+      ]
+    },
+    "ansible_host": {
+      "oneOf": [
+        { "type": "string", "maxLength": 255 },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": []
+}
